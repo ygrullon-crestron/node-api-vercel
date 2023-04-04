@@ -1,6 +1,7 @@
 // index.js
 const express = require('express');
 const { MongoClient, ServerApiVersion } = require('mongodb');
+
 const app = express();
 const PORT = 4000;
 
@@ -12,8 +13,6 @@ client.connect(err => {
   console.log(collection);
   client.close();
 });
-
-
 
 app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `)
