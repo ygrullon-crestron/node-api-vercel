@@ -30,9 +30,12 @@ const insertIntoDB = async () => {
 
     try {
         await connection.query(
-            "INSERT INTO teamMembers (id,FirstName,LastName,Email,Location,Role,Application,ProfilePicture) VALUES('0','yesmar','grullon','grullon.y@live.com','new york','admin','all','/some/url')"
+            "SELECT * FROM teamMembers"
+        ).then(
+          data=>{
+            console.log(data);
+          }
         )
-        console.log("inserted!")
     } catch (e) {
         console.log(e)
     }
