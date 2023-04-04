@@ -32,12 +32,12 @@ const insertIntoDB = async () => {
         await connection.query(
             "SELECT * FROM teamMembers"
         ).then(
-          data=>{
+          data =>{
             console.log(data);
           }
-        )
+        ); 
     } catch (e) {
-        console.log(e)
+        console.log(e);
     }
 }
 
