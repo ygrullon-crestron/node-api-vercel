@@ -18,3 +18,5 @@ const insertIntoDB = async () => {
         console.log(e)
     }
 }
+
+insertIntoDB();
