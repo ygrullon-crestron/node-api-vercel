@@ -11,7 +11,7 @@ const insertIntoDB = async () => {
 
     try {
         await connection.query(
-            "INSERT INTO teamMembers (id,FirstName,LastName,Email,Location,Role,Application,ProfilePicture) VALUES('0','yesmar','grullon','grullon.y@live.com','new york','admin','all','/some/url')"
+            "INSERT INTO teamMembers (id,FirstName,LastName,Email,Location,Role,Application,ProfilePicture) VALUES('1','yesmar','grullon','grullon.y@live.com','new york','admin','all','/some/url')"
         )
         console.log("inserted!")
     } catch (e) {
