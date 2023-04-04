@@ -9,36 +9,10 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳 ha ha ha')
-
+  res.send('Hey this is my API running 🥳')
 })
 
 app.get('/about', (req, res) => {
-  const mysql = require("mysql2/promise");
-
-  const insertIntoDB = async () => {
-      const connection = await mysql.createConnection({
-          host: "sql9.freemysqlhosting.net",
-          user: "sql9610911",
-          password: "NaSUMz2EYi",
-          database: "sql9610911",
-          port: 3306,
-      })
-
-      try {
-          await connection.query(
-              "SELECT * FROM teamMembers"
-          ).then(
-            data =>{
-              console.log(data);
-            }
-          ); 
-      } catch (e) {
-          console.log(e);
-      }
-  }
-
-  insertIntoDB();
   res.send('This is my about route..... ')
 })
 
